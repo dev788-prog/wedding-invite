@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bhagirath weds Heena | Wedding Invitation</title>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&family=Cinzel:wght@500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:'Montserrat',sans-serif;
+  background:#f9f7f3;
+  color:#333;
+}
+
+/* TAP TO ENTER */
+#tapToPlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.85);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+
+
+#tapToPlay span{
+  color:#fff;
+  font-family:'Cinzel',serif;
+  font-size:1.3rem;
+  padding:20px 36px;
+  border:2px solid #f3d9a3;
+  border-radius:40px;
+  letter-spacing:2px;
+}
+
+/* HERO */
+.hero{
+  min-height:120vh;
+  background:
+   
+    url('couple1.jpeg') center/cover no-repeat;
+  display:flex;
+  align-items:right;
+  justify-content:center;
+  padding:40px 20px;
+  color:#fff;
+}
+
+.card{
+  position: absolute;
+  left: 5%;      /* is value ko 2% – 12% tak try kar sakte ho */
+  top: 50%;
+  transform: translateY(-50%);
+
+  background:rgba(44,15,38,.75);
+  padding:100px 60px;
+  border-radius:38px;
+  text-align:center;
+  backdrop-filter:blur(100px);
+  max-width:720px;
+  box-shadow:0 30px 60px rgba(0,0,0,.45);
+}
+
+.invite{
+  font-family:'Cinzel',serif;
+  letter-spacing:4px;
+  font-size:.9rem;
+}
+
+.names{
+  font-family:'Playfair Display SC',serif;
+  font-size:3.4rem;
+  margin:25px 0 10px;
+}
+
+.weds{
+  font-family:'Cinzel',serif;
+  letter-spacing:3px;
+  color:#f3d9a3;
+  font-size:2.3rem;
+  margin-bottom:10px;
+}
+
+/* DATE STYLE */
+.date-box{
+  margin-top:18px;
+}
+.date-main{
+  font-family:'Cinzel',serif;
+  font-size:1.4rem;
+  letter-spacing:3px;
+  color:#f3d9a3;
+}
+.date-sub{
+  margin-top:6px;
+  font-size:.95rem;
+  letter-spacing:2px;
+  color:#f7ebc9;
+}
+
+/* VENUE */
+.venue{
+  margin-top:16px;
+  font-family:'Cinzel',serif;
+  font-size:1.05rem;
+  letter-spacing:2px;
+  color:#f7ebc9;
+}
+
+/* MESSAGE */
+.message{
+  margin-top:30px;
+  font-style:italic;
+  line-height:1.9;
+  color:#f7ebc9;
+}
+
+/* COUNTDOWN */
+.countdown{
+  display:flex;
+  gap:16px;
+  justify-content:center;
+  margin-top:38px;
+}
+.box{
+  background:rgba(255,255,255,.25);
+  padding:16px 18px;
+  border-radius:18px;
+}
+.box span{font-size:1.8rem;}
+.box small{font-size:.7rem;}
+
+/* EVENTS */
+.events{
+  padding:100px 40px;
+  background:#f4efe6;
+  text-align:center;
+}
+.events h2{
+  font-family:'Cinzel',serif;
+  font-size:2.6rem;
+  color:#8b6b2e;
+  margin-bottom:70px;
+}
+.event-card{
+  max-width:650px;
+  margin:25px auto;
+  background:#fff;
+  padding:35px;
+  border-radius:25px;
+  border:1px solid #e6d8b5;
+  box-shadow:0 15px 30px rgba(0,0,0,.08);
+}
+
+/* LOCATION */
+.map{
+  padding:100px 20px;
+  background:linear-gradient(to bottom,#faf7f1,#f3ecd9);
+  text-align:center;
+}
+.map h2{
+  font-family:'Cinzel',serif;
+  font-size:2.6rem;
+  color:#8b6b2e;
+  margin-bottom:60px;
+}
+.map-card{
+  max-width:700px;
+  margin:40px auto;
+  background:#fff;
+  padding:40px;
+  border-radius:32px;
+  border:1px solid #e6d8b5;
+  box-shadow:0 25px 45px rgba(139,107,46,.25);
+  position:relative;
+}
+.map-card::before{
+  content:"📍";
+  font-size:2.2rem;
+  position:absolute;
+  top:-22px;
+  left:50%;
+  transform:translateX(-50%);
+  background:#fff;
+  padding:6px 12px;
+  border-radius:50%;
+}
+.map-card h3{
+  font-family:'Cinzel',serif;
+  color:#8b6b2e;
+  letter-spacing:2px;
+  margin-bottom:12px;
+}
+.map-card iframe{
+  width:100%;
+  height:300px;
+  border:0;
+  border-radius:18px;
+  margin-top:18px;
+}
+.map-btn{
+  display:inline-block;
+  margin-top:25px;
+  padding:13px 30px;
+  background:#8b6b2e;
+  color:#fff;
+  text-decoration:none;
+  border-radius:30px;
+}
+
+/* FOOTER */
+.footer{
+  background:#1f1f1f;
+  color:#eee;
+  padding:30px;
+  text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<!-- MUSIC -->
+<audio id="bgMusic" loop>
+  <source src="Sahiba.mp3" type="audio/mpeg">
+</audio>
+
+<!-- TAP SCREEN -->
+<div id="tapToPlay">
+  <span>Tap to Enter 💖</span>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="card">
+    <div class="invite">WEDDING INVITATION</div>
+
+    <div class="names">Bhagirath</div>
+    <div class="weds">WEDS</div>
+    <div class="names">Heena</div>
+
+    <div class="date-box">
+      <div class="date-main">10 FEBRUARY 2026</div>
+      <div class="date-sub">TUESDAY</div>
+    </div>
+
+    <div class="venue">Lotus Garden, Kund</div>
+
+    <div class="message">
+      “With hearts full of love and gratitude,<br>
+      we invite you to witness the beginning<br>
+      of our forever together.”
+    </div>
+
+    <div class="countdown">
+      <div class="box"><span id="d">00</span><small>DAYS</small></div>
+      <div class="box"><span id="h">00</span><small>HRS</small></div>
+      <div class="box"><span id="m">00</span><small>MIN</small></div>
+      <div class="box"><span id="s">00</span><small>SEC</small></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- EVENTS -->
+<section class="events">
+  <h1>Wedding Events</h1>
+
+  <div class="event-card">
+   <b>8 February 2026</b><br><br>
+    Haldi – 11:15 AM<br>
+    Mehandi – 2:15 PM
+  </div>
+
+  <div class="event-card">
+    <b>9 February 2026</b><br><br>
+
+    Bhat – 3:15 PM<br>
+    Lagan – 4:15 PM<br>
+    Chaak – 5:15 PM
+  </div>
+
+  <div class="event-card">
+    <b>10 February 2026</b><br><br>
+
+    Ghurchari – 4:15 PM<br>
+    Departure of Barat – 5:15 PM<br>
+    Dinner – 7:15 PM
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="map">
+  <h2>Wedding Locations</h2>
+
+  <div class="map-card">
+    <h3>Lagan Ceremony</h3>
+    <iframe src="https://www.google.com/maps?q=47RP+J3P,+Hasanpur,+Bocharia,+Haryana+123021&output=embed"></iframe>
+    <a class="map-btn" href="https://www.google.com/maps?q=47RP+J3P,+Hasanpur,+Bocharia,+Haryana+123021" target="_blank">Open in Google Maps</a>
+  </div>
+
+  <div class="map-card">
+    <h3>Wedding Venue – Lotus Garden, Kund</h3>
+    <iframe src="https://www.google.com/maps?q=Railway+Station+Road,+Kund,+Haryana+123102&output=embed"></iframe>
+    <a class="map-btn" href="https://www.google.com/maps?q=Railway+Station+Road,+Kund,+Haryana+123102" target="_blank">Open in Google Maps</a>
+  </div>
+</section>
+
+<div class="footer">
+  Your presence will make our celebration truly special ✨
+</div>
+
+<script>
+/* MUSIC */
+const music=document.getElementById("bgMusic");
+const overlay=document.getElementById("tapToPlay");
+overlay.addEventListener("click",()=>{
+  music.play();
+  overlay.style.display="none";
+});
+
+/* COUNTDOWN */
+const wedding=new Date(2026,1,10).getTime();
+const dEl=document.getElementById("d");
+const h=document.getElementById("h");
+const m=document.getElementById("m");
+const s=document.getElementById("s");
+
+setInterval(()=>{
+  const now=new Date().getTime();
+  const d=wedding-now;
+  if(d<0)return;
+  dEl.innerText=Math.floor(d/86400000);
+  h.innerText=Math.floor((d%86400000)/3600000);
+  m.innerText=Math.floor((d%3600000)/60000);
+  s.innerText=Math.floor((d%60000)/1000);
+},1000);
+</script>
+
+</body>
+</html>
